@@ -8,13 +8,15 @@ import {DigitransitService} from '../services/digitransit.service';
 })
 export class RoutesComponent implements OnInit {
 
-    pysakki = 'Gransinmäki';
+    pysakki = 'Kansaneläkelaitos';
+    kaikkiReitit: any;
 
     constructor(private digitransitService: DigitransitService) {
     }
 
     ngOnInit() {
         this.digitransitService.getRoutes(this.pysakki).subscribe(response => {
+            this.kaikkiReitit = response.data['stops'];
             console.log(response.data['stops']);
         });
     }

@@ -11,7 +11,7 @@ export class DigitransitService {
 
     getRoutes(nimi) {
         const body = `{
-                    stops(name: "Gransinmäki") {
+                    stops(name: "Kansaneläkelaitos") {
                       name
                       patterns {
                         name

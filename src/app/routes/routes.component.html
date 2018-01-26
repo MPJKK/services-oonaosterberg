@@ -3,5 +3,7 @@
   {{ pysakki }}
 </h2>
 <ul>
-  <li>Name, ShortName, LongName</li>
+  <li *ngFor="let reitti of kaikkiReitit">
+  {{ reitti.patterns[0].name }}, {{ reitti.patterns[0].route.shortName }}, {{ reitti.patterns[0].route.longName }}
+  </li>
 </ul>
